@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet ../sample/calcCSS.css?>
+
+<!-- stylesheets="@../sample/calcCSS.css"-->
+
+<GridPane alignment="TOP_CENTER" blendMode="DARKEN" focusTraversable="true" hgap="10" style="-fx-background-color: b;" stylesheets="@../sample/calcCSS.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <children>
+       <Button fx:id="btn0" minWidth="52.0" mnemonicParsing="false" onAction="#number" text="0" textFill="WHITE" GridPane.rowIndex="2">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="6.0" />
+         </GridPane.margin></Button>
+       <Button fx:id="btn4" minWidth="52.0" mnemonicParsing="false" onAction="#number" text="4" textFill="WHITE" GridPane.rowIndex="6">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="6.0" />
+         </GridPane.margin>
+         <opaqueInsets>
+            <Insets bottom="6.0" />
+         </opaqueInsets></Button>
+       <Button fx:id="btn8" minWidth="52.0" mnemonicParsing="false" onAction="#number" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font></Button>
+       <Button fx:id="btnPlus" minWidth="30.0" mnemonicParsing="false" onAction="#operation" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font></Button>
+       <Button fx:id="btn1" minWidth="52.0" mnemonicParsing="false" onAction="#number" text="1" textFill="WHITE" GridPane.rowIndex="3">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="6.0" />
+         </GridPane.margin></Button>
+       <Button fx:id="btn5" minWidth="52.0" mnemonicParsing="false" onAction="#number" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font></Button>
+       <Button fx:id="btn9" minWidth="52.0" mnemonicParsing="false" onAction="#number" text="9" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="6.0" />
+         </opaqueInsets></Button>
+       <Button fx:id="btnMinus" minWidth="30.0" mnemonicParsing="false" onAction="#operation" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font></Button>
+       <Button fx:id="btn2" minWidth="52.0" mnemonicParsing="false" onAction="#number" text="2" textFill="WHITE" GridPane.rowIndex="4">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="6.0" />
+         </GridPane.margin></Button>
+       <Button fx:id="btn6" minWidth="52.0" mnemonicParsing="false" onAction="#number" text="6" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font></Button>
+       <Button fx:id="btnDel" minWidth="30.0" mnemonicParsing="false" onAction="#operation" text="/" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="6">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font></Button>
+       <Button fx:id="btn3" minWidth="52.0" mnemonicParsing="false" onAction="#number" text="3" textFill="WHITE" GridPane.rowIndex="5">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="6.0" />
+         </GridPane.margin></Button>
+       <Button fx:id="btn7" minWidth="52.0" mnemonicParsing="false" onAction="#number" text="7" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font></Button>
+       <Button fx:id="btnCalc" minWidth="52.0" mnemonicParsing="false" onAction="#calculate" text="=" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font></Button>
+       <Button fx:id="btnUmn" minWidth="30.0" mnemonicParsing="false" onAction="#operation" text="*" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="6.0" />
+         </opaqueInsets></Button>
+      <TextField fx:id="txtCalc" minWidth="150.0" prefHeight="25.0" prefWidth="181.0" GridPane.columnSpan="2" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets left="6.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Button fx:id="deleteOne" minWidth="52.0" mnemonicParsing="false" onAction="#deleteOne" text="&lt;--" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnKoma" minWidth="52.0" mnemonicParsing="false" onAction="#forDouble" text="," textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="6.0" />
+         </opaqueInsets></Button>
+      <Button fx:id="btnMplus" minWidth="52.0" mnemonicParsing="false" onAction="#InMemory" text="M+" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnMminus" minWidth="52.0" mnemonicParsing="false" onAction="#OutMemory" text="M-" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnAC" mnemonicParsing="false" onAction="#deleteAll" prefHeight="27.0" prefWidth="49.0" text="AC" textFill="RED" GridPane.columnIndex="2" GridPane.rowSpan="2">
+         <font>
+            <Font name="Courier New Bold" size="16.0" />
+         </font></Button>
+      <ImageView fx:id="imgGif" fitHeight="136.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowSpan="2">
+         <image>
+            <Image url="@vgif-ru-16464.gif" />
+         </image>
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin></ImageView>
+      <Button fx:id="btnSqrt" layoutX="340.0" layoutY="132.0" minWidth="30.0" mnemonicParsing="false" onAction="#calculateSqrt" text="√‎" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font>
+          <tooltip><Tooltip text="чтоб посчитать корень закончите остальные вычисления с помощью ="/> </tooltip>
+      </Button>
+
+
+
+   </children>
+   <columnConstraints>
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <effect>
+      <DropShadow />
+   </effect>
+</GridPane>
