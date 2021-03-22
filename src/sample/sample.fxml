@@ -124,11 +124,15 @@
             <Insets bottom="6.0" />
          </opaqueInsets></Button>
       <Button fx:id="btnMplus" minWidth="52.0" mnemonicParsing="false" onAction="#InMemory" text="M+" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
-         <font>
+          <tooltip><Tooltip text="добавляет число в стек памяти"/> </tooltip>
+
+          <font>
             <Font name="Courier New Bold" size="14.0" />
          </font></Button>
       <Button fx:id="btnMminus" minWidth="52.0" mnemonicParsing="false" onAction="#OutMemory" text="M-" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
-         <font>
+          <tooltip><Tooltip text="вынуть число из стека памяти"/> </tooltip>
+
+          <font>
             <Font name="Courier New Bold" size="14.0" />
          </font></Button>
       <Button fx:id="btnAC" mnemonicParsing="false" onAction="#deleteAll" prefHeight="27.0" prefWidth="49.0" text="AC" textFill="RED" GridPane.columnIndex="2" GridPane.rowSpan="2">
