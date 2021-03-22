@@ -18,7 +18,7 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         root.styleProperty().setValue(" -fx-background-color: darkgrey;  -fx-border-color: white; -fx-border-width: 3px;"); // CSS локально
 
-        primaryStage.setScene(new Scene(root, 480, 315));
+        primaryStage.setScene(new Scene(root, 480, 415));
         primaryStage.show();
     }
 

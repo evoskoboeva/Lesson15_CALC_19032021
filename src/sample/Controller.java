@@ -2,6 +2,7 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -13,6 +14,11 @@ public class Controller {
 
     @FXML
     TextField txtCalc;
+    @FXML
+    CheckBox cbox1;
+    @FXML
+            Button btn41;
+
     int tempNumber1;
     Double tempNumber;
     String tempBtn;
@@ -21,17 +27,27 @@ public class Controller {
 
     public void number(ActionEvent actionEvent) {
         tempBtn = ((Button) actionEvent.getSource()).getText();
-        //System.out.println(tempBtn);
-        if (txtCalc.getText().equals("0")) {
-            txtCalc.setText(tempBtn);
-        } else {
-            txtCalc.setText(txtCalc.getText() + tempBtn);
+        try {
+
+
+            //System.out.println(tempBtn);
+            if (txtCalc.getText().equals("0")) {
+                txtCalc.setText(tempBtn);
+            } else {
+                txtCalc.setText(txtCalc.getText() + tempBtn);
+            }}
+        catch (Exception exception)
+        {
+
         }
     }
 
 
     public void deleteAll(ActionEvent actionEvent) {
         txtCalc.setText("0");
+        inMemory = 0;
+        tempNumber = 0.;
+
     }
     public void deleteOne(ActionEvent actionEvent) {
 
@@ -102,7 +118,10 @@ public class Controller {
                 break;
             }
             case "/": {
-                realCalculate = num1/num2;
+                if (num2 !=0)
+                {realCalculate = num1/num2;}
+                else {realCalculate = 999999999;
+                }
                 break;
             }
 
@@ -110,7 +129,7 @@ public class Controller {
             break;
         }
 
-        txtCalc.setText(realCalculate!=999999999? realCalculate+"":txtCalc.getText());
+        txtCalc.setText(realCalculate!=999999999? realCalculate+"":txtCalc.getText()+" = operation absent");
     }
 
     public void operation(ActionEvent actionEvent) {
@@ -119,5 +138,9 @@ public class Controller {
 
         txtCalc.setText(tempNumber + tempBtn);
 
+    }
+
+    public void normalCalc(ActionEvent actionEvent) {
+        btn41.setVisible(!btn41.isVisible());
     }
 }
